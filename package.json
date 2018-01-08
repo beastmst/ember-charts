@@ -1,24 +1,30 @@
 {
-  "name": "ember-charts",
+  "name": "@abcum/ember-charts",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An addon for working with charts, timelines, and networks for Ember.js.",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Tobie Morgan Hitchcock",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abcum/ember-charts.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember serve",
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "chart.js": "^2.7.1",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-htmlbars": "^2.0.1",
+    "vis": "^4.21.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
