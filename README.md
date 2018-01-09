@@ -27,11 +27,11 @@ Create a basic chart. The chart type can be one of: [pie](http://www.chartjs.org
 ```js
 export default Ember.Controller.extend({
 	data: {
-	    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-	    datasets: [{
-	        label: '# of Votes',
-	        data: [12, 19, 3, 5, 2, 3],
-	    }]
+		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+		datasets: [{
+			label: '# of Votes',
+			data: [12, 19, 3, 5, 2, 3],
+		}]
 	}
 })
 ```
@@ -45,12 +45,12 @@ And specify custom options a basic line chart.
 ```js
 export default Ember.Controller.extend({
 	options: {
-        legend: {
-            display: true,
-            labels: {
-                fontColor: 'rgb(255, 99, 132)'
-            }
-        }
+		legend: {
+			display: true,
+			labels: {
+				fontColor: 'rgb(255, 99, 132)'
+			}
+		}
 	}
 })
 ```
@@ -91,17 +91,17 @@ import vis from 'vis.js';
 export default Ember.Controller.extend({
 	options: {
 		start: vis.moment().subtract(6, 'months').format(),
-        end: vis.moment().add(6, 'week').format(),
-        width: '100%',
-        height: '100%',
-        align: 'left',
-        orientation: 'top',
-        showCurrentTime: true,
-        autoResize: true,
-        selectable: false,
-        editable: false,
-        zoomMin: 3600000,
-        zoomMax: 31560000000,
+		end: vis.moment().add(6, 'week').format(),
+		width: '100%',
+		height: '100%',
+		align: 'left',
+		orientation: 'top',
+		showCurrentTime: true,
+		autoResize: true,
+		selectable: false,
+		editable: false,
+		zoomMin: 3600000,
+		zoomMax: 31560000000,
 	}
 })
 ```
@@ -171,40 +171,40 @@ import vis from 'vis.js';
 export default Ember.Controller.extend({
 	options: {
 		autoResize: true,
-        width: '100%',
-        height: '100%',
-        interaction: {
-        	zoomView: false,
-        },
-        nodes: {
-            shape: 'box',
-            scaling: {
-                min: 10,
-                max: 30
-            },
-            font: {
-                size: 12,
-                face: 'Helvetica'
-            },
-        },
-        edges: {
-            scaling: {
-                min: 5,
-                max: 15,
-            },
-            font: {
-                size: 10,
-                face: 'Helvetica',
-            },
-        },
-        physics: {
-            stabilization: true,
-            solver: 'repulsion',
-            barnesHut: {
-                damping: 0.5,
-                avoidOverlap: 1,
-            }
-        },
+		width: '100%',
+		height: '100%',
+		interaction: {
+			zoomView: false,
+		},
+		nodes: {
+			shape: 'box',
+			scaling: {
+				min: 10,
+				max: 30
+			},
+			font: {
+				size: 12,
+				face: 'Helvetica'
+			},
+		},
+		edges: {
+			scaling: {
+				min: 5,
+				max: 15,
+			},
+			font: {
+				size: 10,
+				face: 'Helvetica',
+			},
+		},
+		physics: {
+			stabilization: true,
+			solver: 'repulsion',
+			barnesHut: {
+				damping: 0.5,
+				avoidOverlap: 1,
+			}
+		},
 	}
 })
 ```
