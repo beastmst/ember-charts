@@ -8,17 +8,17 @@ export default Component.extend({
 
 	didInsertElement() {
 		this._super(...arguments);
-		this.sendAction('register', this);
+		this.get('register')(this);
 	},
 
 	willDestroyElement() {
-		this.sendAction('unregister', this);
 		this._super(...arguments);
+		this.get('unregister')(this);
 	},
 
 	didUpdateAttrs() {
 		this._super(...arguments);
-		this.sendAction('reregister', this);
+		this.get('reregister')(this);
 	},
 
 });

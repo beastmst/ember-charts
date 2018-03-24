@@ -2,7 +2,7 @@
 
 An addon for working with charts, timelines, and networks in an Ember.js app.
 
-[![](https://img.shields.io/circleci/project/abcum/ember-charts/master.svg?style=flat-square)](https://circleci.com/gh/abcum/ember-charts) [![](https://img.shields.io/npm/v/@abcum/ember-charts.svg?stylchartse=flat-square)](https://www.npmjs.com/package/@abcum/ember-charts) [![](https://img.shields.io/badge/ember-2.16.2+-orange.svg?style=flat-square)](https://github.com/abcum/ember-charts) [![](https://david-dm.org/abcum/ember-charts/status.svg?style=flat-square)](https://david-dm.org/abcum/ember-charts) [![](https://david-dm.org/abcum/ember-charts/dev-status.svg?style=flat-square)](https://david-dm.org/abcum/ember-charts?type=dev) [![](https://img.shields.io/badge/license-MIT-00bfff.svg?style=flat-square)](https://github.com/abcum/ember-charts) 
+[![](https://img.shields.io/circleci/project/abcum/ember-charts/master.svg?style=flat-square)](https://circleci.com/gh/abcum/ember-charts) [![](https://img.shields.io/npm/v/@abcum/ember-charts.svg?stylchartse=flat-square)](https://www.npmjs.com/package/@abcum/ember-charts) [![](https://img.shields.io/badge/ember-2.16.1+-orange.svg?style=flat-square)](https://github.com/abcum/ember-charts) [![](https://david-dm.org/abcum/ember-charts/status.svg?style=flat-square)](https://david-dm.org/abcum/ember-charts) [![](https://david-dm.org/abcum/ember-charts/dev-status.svg?style=flat-square)](https://david-dm.org/abcum/ember-charts?type=dev) [![](https://img.shields.io/badge/license-MIT-00bfff.svg?style=flat-square)](https://github.com/abcum/ember-charts) 
 
 ## Usage
 

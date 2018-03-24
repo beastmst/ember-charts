@@ -1,18 +1,15 @@
 import Component from '@ember/component';
-import StylesMixin from '../mixins/styles';
 import { computed } from '@ember/object';
 import layout from '../templates/components/network-view';
 import vis from 'vis.js';
 
-export default Component.extend(StylesMixin, {
+export default Component.extend({
 
 	layout,
 
 	width: '100%',
 
 	height: '100%',
-
-	styleBindings: ['width', 'height'],
 
 	nodes: computed(function() {
 		return new vis.DataSet([]);
@@ -30,12 +27,18 @@ export default Component.extend(StylesMixin, {
 
 		this._super(...arguments);
 
+		this.$().css({
+			width: this.get('width'),
+			height: this.get('height'),
+		});
+
 		this.network = new vis.Network(this.element, {
 			nodes: this.get('nodes'),
 			edges: this.get('edges'),
 		}, this.get('options'));
 
 		this.network.on('zoom', (properties) => {
+			// eslint-disable-next-line ember/closure-actions
 			this.sendAction('on-zoom', properties);
 		});
 
@@ -49,6 +52,7 @@ export default Component.extend(StylesMixin, {
 		});
 
 		this.network.on('click', (properties) => {
+			// eslint-disable-next-line ember/closure-actions
 			this.sendAction('on-click', properties);
 			this.get('nodes').get(properties.nodes).forEach(node => {
 				if (node['on-click']) node['on-click'](properties.event);
@@ -59,6 +63,7 @@ export default Component.extend(StylesMixin, {
 		});
 
 		this.network.on('doubleClick', (properties) => {
+			// eslint-disable-next-line ember/closure-actions
 			this.sendAction('on-dblclick', properties);
 			this.get('nodes').get(properties.nodes).forEach(node => {
 				if (node['on-dblclick']) node['on-dblclick'](properties.event);
@@ -69,6 +74,7 @@ export default Component.extend(StylesMixin, {
 		});
 
 		this.network.on('oncontext', (properties) => {
+			// eslint-disable-next-line ember/closure-actions
 			this.sendAction('on-contextmenu', properties);
 			this.get('nodes').get(properties.nodes).forEach(node => {
 				if (node['on-contextmenu']) node['on-contextmenu'](properties.event);
