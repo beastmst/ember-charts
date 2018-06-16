@@ -1,6 +1,6 @@
 {
   "name": "@abcum/ember-charts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An addon for working with charts, timelines, and networks for Ember.js.",
   "keywords": [
     "ember-addon"
